@@ -129,6 +129,16 @@ nav li a:last-child {
     clear: both;
  }
 
+ .main-content {
+    float: left;
+    width: 100%;
+    max-width: 960px;
+    padding: 30px;
+    margin: 0 0 40px;
+    background: #fff;
+    border: 1px solid #ddd;
+  }
+
 #main-bio, #bio-image {
     float: left;
     margin: 0 auto;
@@ -150,7 +160,7 @@ nav li a:last-child {
     padding-right: 20px;
 }
 
-h2 {
+h1, h2 {
     font-family: Arial, Helvetica, sans-serif;
     color: #4aaaa5;
     font-size: 30px;
@@ -171,8 +181,15 @@ p {
     margin-bottom: auto;
 }
 
-#footer,
-#contact-footer {
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: #4aaaa5;
+   
+
+}
+
+#footer {
     width: 100%;
     position: fixed;
     background-color: #666666;
@@ -243,15 +260,60 @@ textarea {
     height: 150px;
 }
 
+.work {
+    position: relative;
+    float: left;
+    width: 350px;
+    margin: 20px 0 25px;
+    overflow: auto;
+}
+
+work img{
+    width: 100%;
+    border: 0 none;
+    opacity: 0.8;
+}
+
+.work:nth-child(even) {
+    margin-right: 100px;
+  }
+  
+.work img {
+    width: 100%;
+    border: 0 none;
+    opacity: 2;
+  }
+
+h3{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 0;
+    font-weight: 300;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background: #4aaaa5;
+    border-bottom: 0;
+}
+
+.sample-image {
+    float:left;
+    width: 300px;
+    height: auto;
+    margin-top: 10px;
+    margin-right: 25px;
+}
+
 @media screen and (max-width: 980px) {
     body {
         background-color: #dddddd;
     }
-  
-    .container {
-      width: 850px;
-   
-      margin-top: 100px;
+    
+    .container .wrapper {
+        width: 850px;
+        margin-top: 100px;
     }
     mainheader {
         width: 860px;
@@ -261,8 +323,8 @@ textarea {
         clear: both;
         overflow: auto;
     }
+
     .nav li a {
-        
         color:#777777;
         text-decoration: none;
         font-size: 15px; 
@@ -275,38 +337,23 @@ textarea {
         position: fixed;
         margin-top: 20px;
         right: 0 ;
-     }
+    }
 
-     .nav li a {
-         color: #777777;
-         margin-top: 20px;
+    .nav li a {
+        color: #777777;
+        margin-top: 20px;
          
-     }
-     li {
+    }
+    li {
          margin-right: 0px;
-     }
+    }
      .nav .row ul {
-         width: 300px;
-         float: right;
-     }
-    
-    .wrapper{
-      width: 850px;
-      height: 600px;
-      margin-top: 160px;
-
+        width: 300px;
+        float: right;
     }
-    #contact-footer {
-        width: 100%;
-        position: fixed;
-        background-color: #666666;
-        bottom: 0;
-        height: 50px;
-        border-top: 5px solid #4aaaa5;
-    }
+}
 
-  }
-    @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     body {
         background-color: #dddddd;
     }
@@ -315,6 +362,12 @@ textarea {
         width: 720px;
         height: 50px;
     }
+       
+    .wrapper{
+        width: 650px;
+        height: 600px;
+        margin-top: 160px;
+    }
 
     .Header {
         width:720px;
@@ -322,12 +375,11 @@ textarea {
         overflow: auto;
     }
 
-    .row {
-       
+    .row {       
         margin-right: 100px;
         width: 528px;
-
     }
+
     .nav  {
         margin-top: 20px;
     }
@@ -342,27 +394,25 @@ textarea {
     li {
         margin-right: 0px;
     }
-   
-    .wrapper{
-      width: 650px;
-      height: 600px;
-      margin-top: 160px;
-
-    }
-  }
+}
   
-    @media screen and (max-width: 640px) {
+@media screen and (max-width: 640px) {
      body {
-      background-color: #dddddd;
+        background-color: #dddddd;
     }
   
     .container {
-      width: 600px;
-      margin-top: 70px;
+        width: 600px;
+        margin-top: 70px;
     }
+
+    .wrapper{
+        width:550px;
+        margin-top: 160px;
+    }
+
     .row {
         width: 300px;
-       
         right: 0;
     }
 
@@ -378,28 +428,24 @@ textarea {
         float: right;
         margin-top: 10px;
     }
-
-    @media screen and (max-width: 610px) {
-            /* The body's bg color will be #333 */
-            body {
-              background-color: #dddddd;
-            }
-            .row {
-                position: relative;
-                background: lightgreen;
-                height: 150px;
-            }
-            .nav li a {
-        
-                color:#666666;
-                text-decoration: none;
-                font-size: 15px; 
-                float: right;
-                margin-top: 0px;
-            }
-
-            
-           
-        }
-
 }
+
+@media screen and (max-width: 610px) {
+    body {
+        background-color: #dddddd;
+        }
+    .row {
+        position: relative;
+        background: lightgreen;
+        height: 150px;
+        }
+    .nav li a {        
+        color:#666666;
+        text-decoration: none;
+        font-size: 15px; 
+        float: right;
+        margin-top: 0px;
+        }
+    }
+
+
